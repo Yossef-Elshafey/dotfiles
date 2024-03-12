@@ -1,0 +1,14 @@
+2024/03/10-07:27:43.499 3731 Reusing MANIFEST /home/yossef/.config/Postman/Partitions/2ad13000-1b7d-4193-9e93-59a7478db2b9/IndexedDB/https_desktop.postman.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/03/10-07:27:43.499 3731 Recovering log #23
+2024/03/10-07:27:43.505 3731 Reusing old log /home/yossef/.config/Postman/Partitions/2ad13000-1b7d-4193-9e93-59a7478db2b9/IndexedDB/https_desktop.postman.com_0.indexeddb.leveldb/000023.log 
+2024/03/10-07:27:43.505 3731 Delete type=2 #22
+2024/03/10-07:27:43.505 3731 Delete type=2 #24
+2024/03/10-07:48:06.986 3736 Level-0 table #28: started
+2024/03/10-07:48:07.019 3736 Level-0 table #28: 1374907 bytes OK
+2024/03/10-07:48:07.021 3736 Delete type=0 #23
+2024/03/10-07:49:43.385 34f2 Compacting 1@1 + 1@2 files
+2024/03/10-07:49:43.391 34f2 Generated table #29@1: 847 keys, 42963 bytes
+2024/03/10-07:49:43.391 34f2 Compacted 1@1 + 1@2 files => 42963 bytes
+2024/03/10-07:49:43.393 34f2 compacted to: files[ 0 0 1 0 0 0 0 ]
+2024/03/10-07:49:43.393 34f2 Delete type=2 #25
+2024/03/10-07:49:43.393 34f2 Delete type=2 #28

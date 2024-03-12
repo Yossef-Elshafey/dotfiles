@@ -1,0 +1,9 @@
+2024/03/09-01:37:36.714 41e Reusing MANIFEST /home/yossef/.config/Postman/Partitions/2ad13000-1b7d-4193-9e93-59a7478db2b9/Local Storage/leveldb/MANIFEST-000001
+2024/03/09-01:37:36.715 41e Recovering log #6
+2024/03/09-01:37:36.716 41e Reusing old log /home/yossef/.config/Postman/Partitions/2ad13000-1b7d-4193-9e93-59a7478db2b9/Local Storage/leveldb/000006.log 
+2024/03/09-02:10:14.450 5498 Level-0 table #10: started
+2024/03/09-02:10:14.452 5498 Level-0 table #10: 17960 bytes OK
+2024/03/09-02:10:14.453 5498 Delete type=0 #6
+2024/03/09-07:07:17.766 2f83 Level-0 table #12: started
+2024/03/09-07:07:17.768 2f83 Level-0 table #12: 12447 bytes OK
+2024/03/09-07:07:17.770 2f83 Delete type=0 #9

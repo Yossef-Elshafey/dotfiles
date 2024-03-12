@@ -1,0 +1,15 @@
+vim.opt.nu = true
+vim.opt.relativenumber = true
+vim.opt.scrolloff = 8
+vim.opt.wrap = false
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+vim.opt.scrolloff = 10
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = ".vim/undotree"
+vim.opt.undofile = true
+vim.opt.colorcolumn = "100"
+-- vim.api.nvim_command("autocmd BufNewFile,BufRead * setlocal spell spelllang=en_us")
