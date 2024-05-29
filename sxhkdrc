@@ -1,0 +1,29 @@
+super + w
+		firefox
+
+super + Return
+		$TERMINAL
+
+super + p
+		pix
+
+super + k
+		qalculate-qt
+
+super + h
+		$HOME/life/sh/headphone.sh
+
+super + s 
+		$HOME/life/sh/speaker.sh
+
+super + minus
+		$HOME/life/sh/dec.sh
+
+super + equal
+		$HOME/life/sh/inc.sh
+
+super + backslash
+		$HOME/src/Postman/Postman
+
+super + l
+		libreoffice
