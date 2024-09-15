@@ -1,0 +1,28 @@
+setxkbmap -layout us,ara -variant ,digits -option grp:ctrl_space_toggle &
+xautolock -time 30 -locker $HOME/life/sh/down.sh &
+sxhkd &
+dwm &
+picom -b --config $HOME/.config/picom/picom.conf &
+~/.fehbg &
+
+dte(){
+    dte="$(date +"%A, %B %d - $((10#$(date +%H) % 12)):%M")"
+		echo -e "$dte"
+}
+
+mem() {
+		memory=$(free -m | awk 'NR==2{printf "%.2f%%", $3*100/$2 }')
+		echo "Memory: $memory"
+}
+
+cpu() {
+		cpu_usage=$(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1"%"}')
+    echo "CPU: $cpu_usage"
+}
+
+while true; do 
+    sound_info=$(./life/sh/sound.sh)
+		temp=$(./life/sh/temp.sh)
+    xsetroot -name " $sound_info | $(mem) | $(cpu) - $temp | $(dte) "
+    sleep 1s
+done
