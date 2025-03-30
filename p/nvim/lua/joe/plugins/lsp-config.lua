@@ -79,11 +79,6 @@ return {
 		mason_lspconfig.setup_handlers({
 			-- default handler for installed servers
 			function(server_name)
-				if server_name == "tsserver" then
-					-- https://github.com/neovim/nvim-lspconfig/pull/3232
-					-- doesn't change for mason
-					server_name = "ts_ls"
-				end
 				lspconfig[server_name].setup({
 					capabilities = capabilities,
 				})

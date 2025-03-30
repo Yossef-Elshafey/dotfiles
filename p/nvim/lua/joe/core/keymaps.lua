@@ -1,5 +1,4 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>ex", "<cmd>Explore<CR>")
 vim.keymap.set("n", "<C-l>", "<C-w>l", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-h>", "<C-w>h", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { noremap = true, silent = true })
@@ -26,3 +25,10 @@ vim.api.nvim_set_keymap("n", "<C-i>", ":bprev<CR>zz", { noremap = true, silent =
 vim.api.nvim_set_keymap("n", "<C-x>", ":bdelete<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_create_user_command("W", "w", {})
+
+-- floating window bg
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#010409" })
+	end,
+})
