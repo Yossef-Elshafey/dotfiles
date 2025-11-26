@@ -16,16 +16,13 @@ return {
 	},
 	config = function()
 		local cmp = require("cmp")
-
 		local luasnip = require("luasnip")
-
 		local lspkind = require("lspkind")
 
 		require("luasnip.loaders.from_vscode").lazy_load()
 
 		cmp.setup({
 			preselect = cmp.PreselectMode.None,
-
 			completion = {
 				completeopt = "menu,menuone,preview,noselect,noinsert",
 			},
@@ -52,12 +49,12 @@ return {
 			}),
 
 			-- configure lspkind for vs-code like pictograms in completion menu
-			formatting = {
-				format = lspkind.cmp_format({
-					maxwidth = 50,
-					ellipsis_char = "...",
-				}),
-			},
+			-- formatting = {
+			-- 	format = lspkind.cmp_format({
+			-- 		maxwidth = 50,
+			-- 		ellipsis_char = "...",
+			-- 	}),
+			-- },
 		})
 	end,
 }

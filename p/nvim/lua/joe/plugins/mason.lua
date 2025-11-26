@@ -28,16 +28,10 @@ return {
 				"cssls",
 				"tailwindcss",
 				"lua_ls",
+        "gopls",
+        "pyright",
 			},
 		})
 
-		mason_tool_installer.setup({
-			ensure_installed = {
-				"prettier", -- prettier formatter
-				"stylua", -- lua formatter
-				"black", -- python formatter
-				"eslint_d",
-			},
-		})
 	end,
 }

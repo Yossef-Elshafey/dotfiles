@@ -20,15 +20,8 @@ vim.keymap.set("n", "<leader>dd", "<cmd>lua vim.diagnostic.disable()<CR>")
 vim.keymap.set("n", "<leader>de", "<cmd>lua vim.diagnostic.enable()<CR>")
 vim.keymap.set("n", "G", "Gzz")
 vim.keymap.set("i", "<C-c>", "<ESC>")
-vim.api.nvim_set_keymap("n", "<C-o>", ":bnext<CR>zz", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-i>", ":bprev<CR>zz", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-o>", ":bprev<CR>zz", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-i>", ":bnext<CR>zz", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-x>", ":bdelete<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_create_user_command("W", "w", {})
-
--- floating window bg
-vim.api.nvim_create_autocmd("VimEnter", {
-	callback = function()
-		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#010409" })
-	end,
-})

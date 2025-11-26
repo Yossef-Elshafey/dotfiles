@@ -1,5 +1,6 @@
 return {
 	"ThePrimeagen/harpoon",
+  dependencies = { "nvim-lua/plenary.nvim" },
 	config = function()
 		vim.keymap.set("n", "<C-s>", "<cmd>lua require('harpoon.mark').add_file()<CR>")
 		vim.keymap.set("n", "<C-k>", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>")

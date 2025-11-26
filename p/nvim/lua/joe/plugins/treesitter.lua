@@ -1,22 +1,40 @@
 return {
-	branch = "0.1.x",
 	"nvim-treesitter/nvim-treesitter",
 	event = { "BufReadPre", "BufNewFile" },
 	build = ":TSUpdate",
-	dependencies = {
-		"windwp/nvim-ts-autotag",
-	},
 	config = function()
-		require("nvim-treesitter.configs").setup({
-			ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "javascript", "typescript", "python", "tsx" },
-			sync_install = false,
-			auto_install = true,
+		-- import nvim-treesitter plugin
+		local treesitter = require("nvim-treesitter.configs")
+
+		treesitter.setup({
 			highlight = {
 				enable = true,
 			},
+
 			indent = {
 				enable = true,
 				disable = { "yaml" },
+			},
+			auto_install = true,
+
+			-- ensure these language parsers are installed
+			ensure_installed = {
+				"json",
+				"javascript",
+				"typescript",
+				"tsx",
+				"yaml",
+				"html",
+				"css",
+				"markdown",
+				"bash",
+				"lua",
+				"vim",
+				"dockerfile",
+				"gitignore",
+				"query",
+				"c",
+				"go",
 			},
 		})
 	end,

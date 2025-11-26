@@ -1,11 +1,12 @@
 return {
 	"nvim-lualine/lualine.nvim",
+	enabled = true, -- lua line is off
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
 		require("lualine").setup({
 			options = {
 				icons_enabled = true,
-				theme = "gruvbox-material",
+				theme = "16color",
 				component_separators = { left = "", right = "" },
 				section_separators = { left = "", right = "" },
 				always_divide_middle = true,
