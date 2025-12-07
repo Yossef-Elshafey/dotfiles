@@ -1,6 +1,13 @@
 return {
 	"folke/trouble.nvim",
-	opts = {}, -- for default options, refer to the configuration section for custom setup.
+	opts = { -- for default options, refer to the configuration section for custom setup.
+		win = {
+			size = 0.2,
+			position = "right",
+			type = "split",
+			relative = "win",
+		},
+	},
 	cmd = "Trouble",
 	keys = {
 		{

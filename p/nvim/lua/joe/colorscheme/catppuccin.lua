@@ -2,11 +2,10 @@ return {
 	"catppuccin/nvim",
 	name = "catppuccin",
 	priority = 1000,
-
 	config = function()
 		require("catppuccin").setup({
 			default_integrations = false,
-			transparent_background = true,
+			transparent_background = false,
 			integrations = {
 				cmp = true,
 				blink_cmp = true,
@@ -240,7 +239,5 @@ return {
 				},
 			},
 		})
-
-		vim.cmd.colorscheme("catppuccin-macchiato")
 	end,
 }

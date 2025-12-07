@@ -29,12 +29,14 @@ vim.o.background = "dark"
 
 vim.o.laststatus = 0
 
--- floating window bg
-vim.api.nvim_create_autocmd("VimEnter", {
-	callback = function()
-		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#222222" }) -- Float windows black
-	end,
-})
+local function transparent_background()
+	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+	vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+	vim.api.nvim_set_hl(0, "TabLine", { bg = "NONE" })
+	vim.api.nvim_set_hl(0, "TabLineFill", { bg = "NONE" })
+	vim.api.nvim_set_hl(0, "TabLineSel", { bg = "NONE" })
+end
 
 -- preserve folds for buffers
 vim.api.nvim_create_autocmd({ "BufWinLeave" }, {
@@ -48,3 +50,9 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 	desc = "load view (folds), when opening file",
 	command = "silent! loadview",
 })
+
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+-- 	callback = transparent_background,
+-- })
+
+vim.api.nvim_create_user_command("GoTransparent", transparent_background, { nargs = 0, desc = "Set bg = none for UI" })
