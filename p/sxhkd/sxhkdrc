@@ -1,11 +1,14 @@
 super + w
     firefox
 
+super + F12
+  xrandr --output HDMI-0 --brightness 0.2
+
+super + F11
+  xrandr --output HDMI-0 --brightness 1
+
 super + Return
     $TERMINAL
-
-super + p
-    pix
 
 super + k
     qalculate-qt
@@ -37,9 +40,6 @@ Print
 super + Print 
     maim -s | xclip -selection clipboard -t image/png
 
-
-super + End
-    doas zzz
 
 super + m
     dmenu_run

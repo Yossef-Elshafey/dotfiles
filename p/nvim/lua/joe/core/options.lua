@@ -10,7 +10,7 @@ opt.autoindent = true
 opt.wrap = false
 opt.ignorecase = true
 opt.smartcase = true
-vim.opt.showtabline = 0
+opt.showtabline = 0
 
 opt.cursorline = true
 opt.termguicolors = true
@@ -24,6 +24,7 @@ opt.backup = false
 opt.undodir = ".vim/undotree"
 opt.undofile = true
 
+opt.mouse = "a"
 opt.colorcolumn = "90"
 vim.o.background = "dark"
 

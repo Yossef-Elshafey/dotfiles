@@ -1,31 +1,3 @@
--- return {
--- 	"stevearc/conform.nvim",
--- 	event = { "BufReadPre", "BufNewFile" },
--- 	config = function()
--- 		local conform = require("conform")
--- 		conform.setup({
--- 			formatters_by_ft = {
--- 				javascript = { "prettier" },
--- 				typescript = { "prettier" },
--- 				javascriptreact = { "prettier" },
--- 				typescriptreact = { "prettier" },
--- 				css = { "prettier" },
--- 				html = { "prettier" },
--- 				json = { "prettier" },
--- 				yaml = { "prettier" },
--- 				markdown = { "prettier" },
--- 				graphql = { "prettier" },
--- 				lua = { "stylua" },
--- 				python = { "black" },
--- 			},
--- 			format_on_save = {
--- 				lsp_format = "fallback",
--- 				timeout_ms = 500,
--- 			},
--- 		})
--- 	end,
--- }
---
 return {
 	"stevearc/conform.nvim",
 	event = { "BufReadPre", "BufNewFile" },
@@ -47,6 +19,18 @@ return {
 				python = { "black" },
 			},
 			format_on_save = function(bufnr)
+				local bufname = vim.api.nvim_buf_get_name(bufnr)
+
+				-- Example: Disable formatting for any file containing '/tmp/' in its path
+				if bufname:match("/tmp/") then
+					return
+				end
+
+				local filetype = vim.api.nvim_buf_get_option(bufnr, "filetype")
+				if filetype == "c" then
+					return
+				end
+
 				if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
 					return nil -- Skip formatting when disabled
 				end
@@ -66,6 +50,7 @@ return {
 				vim.b.disable_autoformat = false
 				vim.g.disable_autoformat = false
 			end, {}),
+			vim.cmd("FormatDisable"),
 		})
 	end,
 }

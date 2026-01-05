@@ -20,8 +20,19 @@ vim.keymap.set("n", "<leader>dd", "<cmd>lua vim.diagnostic.disable()<CR>")
 vim.keymap.set("n", "<leader>de", "<cmd>lua vim.diagnostic.enable()<CR>")
 vim.keymap.set("n", "G", "Gzz")
 vim.keymap.set("i", "<C-c>", "<ESC>")
+vim.keymap.set("v", "<C-l>", "!column -t<CR>")
 vim.api.nvim_set_keymap("n", "<C-o>", ":bprev<CR>zz", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-i>", ":bnext<CR>zz", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-x>", ":bdelete<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_create_user_command("W", "w", {})
+
+vim.api.nvim_create_user_command("AlignOnChar", function()
+	local char = vim.fn.input("Char: ")
+	if char == "" then
+		return
+	end
+	vim.cmd("'<,'>s/" .. char .. "/ " .. char)
+end, { range = true })
+
+vim.keymap.set("v", "<leader>id", ":AlignOnChar<CR>", { silent = true })

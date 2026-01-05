@@ -5,10 +5,6 @@ local function colorPicker()
 		"ayu-light",
 		"catppuccin-macchiato",
 		"catppuccin-mocha",
-		"github_dark_colorblind",
-		"github_dark_default",
-		"github_dark_high_contrast",
-		"github_dark_tritanopia",
 		"gruvbox",
 		"melange",
 	}

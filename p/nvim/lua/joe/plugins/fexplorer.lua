@@ -31,7 +31,7 @@ return {
 		})
 	end,
 
-	-- floating centered window
+	-- -- floating centered window
 	-- config = function()
 	-- 	vim.keymap.set("n", "<leader>tt", "<cmd>NvimTreeToggle<CR>")
 	-- 	-- disable netrw at the very start of your init.lua
